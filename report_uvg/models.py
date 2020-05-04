@@ -2,7 +2,7 @@ from django.db import models
 import uuid
 
 # Create your models here.
-class report_uvg(models.Model):
+class Report_uvg(models.Model):
     contagion_covid = models.BooleanField()
     contagion_covid_days = models.IntegerField()
     cough = models.BooleanField()
@@ -18,6 +18,7 @@ class report_uvg(models.Model):
     transmission_oms_days = models.BooleanField()
     user = models.ForeignKey(
         'user.User',
+        related_name='reports_self',
         on_delete=models.SET_NULL,
         null=True
     )

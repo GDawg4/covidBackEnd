@@ -7,6 +7,7 @@ class Municipality(models.Model):
     nombre = models.CharField(max_length=100)
     dep_code = models.ForeignKey(
         'department.Department',
+        related_name='municipalities',
         on_delete=models.SET_NULL,
         null=True
     )
