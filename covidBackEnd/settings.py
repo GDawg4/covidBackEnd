@@ -37,6 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'user.apps.UserConfig',
+    'report_uvg.apps.ReportUvgConfig',
+    'report_housemates.apps.ReportHousematesConfig',
+    'department.apps.DepartmentConfig',
+    'municipality.apps.MunicipalityConfig',
 ]
 
 MIDDLEWARE = [
