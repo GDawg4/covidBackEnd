@@ -1,13 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
-from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from report_uvg.models import Report_uvg
-from report_uvg.serializers import SelfReportSerializer
+from municipality.models import Municipality
+from municipality.serializers import MunicipalitiesSerializers
 
 # Create your views here.
 
@@ -18,12 +16,21 @@ from report_uvg.serializers import SelfReportSerializer
 
 
 
+
+
+
+
+
+
+
+
+#End points
 @action(detail=True, methods=['get'])
-def reports_uvg(self, request, pk=None):
-    reports_uvg = self.get_object()
+def municipalitys(self, request, pk=None):
+    municipalitys = self.get_object()
     response = []
-    for report_uvg in reports_uvg.object.all():
-        response.append(report_uvg)
+    for municipality in municipalitys.object.all():
+        response.append(municipality)
 
     return Response(response)
     
