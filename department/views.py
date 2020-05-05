@@ -1,3 +1,4 @@
+
 from guardian.shortcuts import assign_perm
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -31,6 +32,4 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 
         department = serializer.save()
         assign_perm('departments.view_department', user, department)
-      
-
-          
+    

@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from rest_framework import viewsets
+from advice.serializers import AdviceSerializer
+from advice.models import Advice
 
-# Create your views here.
+class AdviceViewSet(viewsets.ModelViewSet):
+    queryset = Advice.objects.all()
+    serializer_class = AdviceSerializer

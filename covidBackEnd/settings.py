@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'report_uvg.apps.ReportUvgConfig',
     'report_housemates.apps.ReportHousematesConfig',
     'department.apps.DepartmentConfig',
+    'advice.apps.AdviceConfig',
     'municipality.apps.MunicipalityConfig',
 ]
 
