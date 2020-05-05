@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'guardian',
+    'corsheaders',
 
     'user.apps.UserConfig',
     'report_uvg.apps.ReportUvgConfig',
