@@ -7,10 +7,7 @@ from department.views import DepartmentViewSet
 
 router = routers.DefaultRouter()
 router.register(r'department', DepartmentViewSet)
-# router.register(r'babies', BabyViewSet)
-# router.register(r'babies', BabyViewSet)
-# router.register(r'babies', BabyViewSet)
-# router.register(r'babies', BabyViewSet)
+
 
 
 urlpatterns = [
